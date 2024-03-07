@@ -2,3 +2,7 @@ palmerpenguins
 shinywidgets
 htmltools
 plotly
+palmerpenguins # datasets package
+altair
+anywidget
+jsonschema
