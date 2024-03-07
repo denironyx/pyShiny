@@ -9,16 +9,28 @@ ui.input_selectize(
     choices=['bill_length_mm', 'body_mass_g']
 )
 
-@render.data_frame
-def head():
+# @render.data_frame
+# def head():
+#     from palmerpenguins import load_penguins
+#     df = load_penguins()
+#     return df[["species",input.var()]]
+
+# @render_altair
+# def hist():
+#     import altair as alt
+#     from palmerpenguins import load_penguins
+#     df = load_penguins()
+#     return alt.Chart(df).mark_bar().encode(
+#         x=alt.X(f"{input.var()}:Q", bin=True),
+#         y="count()"
+#     )
+
+@render_plotly
+def hist():
+    import plotly.express as px
     from palmerpenguins import load_penguins
     df = load_penguins()
-    return df[["species",input.var()]]
-
-@render_altair
-def hist():
-    import altair as alt
-    from
+    return px.histogram(df, x=input.var())
 
 # with ui.sidebar():
 #     ui.input_selectize(
