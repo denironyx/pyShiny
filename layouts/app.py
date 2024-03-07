@@ -1,0 +1,12 @@
+import plotly.express as px
+from shiny.express import input, render, ui
+from shinywidgets import render_widget
+
+ui.page_opts(title="Sidebar layout", fillable=True)
+
+with ui.sidebar():
+    ui.input_select("var", "Select variable", choices=["total_bill", "tip"])
+
+@render_widget
+def hist():
+    return px.histogram(px.data.tips(), input.var())
