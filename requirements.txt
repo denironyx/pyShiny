@@ -1,0 +1,4 @@
+palmerpenguins
+shinywidgets
+htmltools
+plotly
