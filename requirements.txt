@@ -6,3 +6,5 @@ palmerpenguins # datasets package
 altair
 anywidget
 jsonschema
+shinylive
+shiny
