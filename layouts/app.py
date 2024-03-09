@@ -21,14 +21,14 @@ with ui.navset_card_underline(title="Penguins"):
 #     def hist():
 #         return px.histogram(px.data.tips(), input.var())
 
-    # with ui.nav_panel("Table"):
-    #     @render.table
-    #     def table():
-    #         return px.data.tips() 
     with ui.nav_panel("Table"):
-        @render.data_frame
+        @render.table
         def table():
-            return tips[[input.var()]]
+            return px.data.tips() 
+    # with ui.nav_panel("Table"):
+    #     @render.data_frame
+    #     def table():
+    #         return tips[[input.var()]]
 
 # @render_widget
 # def hist():
