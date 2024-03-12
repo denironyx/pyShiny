@@ -12,3 +12,5 @@ def hist():
     from palmerpenguins import load_penguins
     df = load_penguins()
     return px.histogram(df, x=input.var())
+
+
