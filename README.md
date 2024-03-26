@@ -4,3 +4,5 @@
 - shiny create
 - shiny run --reload --launch-browser basic-app/app.py
 -
+
+Its ready for use
